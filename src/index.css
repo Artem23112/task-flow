@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+html,
+body {
+  overflow: hidden;
+}
+
+button,
+a,
+option,
+select {
+  cursor: pointer;
+}
+
+@theme {
+  --breakpoint-xxs: 22.5rem; /* 360px */
+  --breakpoint-xs: 30rem; /* 480px */
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+
+@layer components {
+  :is(a, button).btn {
+    color: var(--color-gray-600);
+    background-color: transparent;
+    transition:
+      color 0.3s,
+      background-color 0.3s;
+
+    &:hover {
+      color: var(--color-gray-900);
+      background-color: var(--color-gray-100);
+    }
+  }
+
+  :is(a, button).btn.active,
+  :is(a, button).btn.hover-blue:hover {
+    color: var(--color-blue-700) !important ;
+    background-color: var(--color-blue-100) !important ;
+  }
+
+  :is(a, button).btn.hover-red:hover {
+    color: var(--color-red-700) !important ;
+    background-color: var(--color-red-100) !important ;
+  }
+
+  .form-item-common {
+    @apply w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500;
+  }
+}

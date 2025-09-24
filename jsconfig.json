@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "checkJs": true,
+    "jsx": "react-jsx",
+
+    "paths": {
+      "components/*": ["components/*"],
+      "assets/*": ["assets/*"],
+      "routes/*": ["routes/*"],
+      "context/*": ["context/*"],
+      "app/*": ["app/*"],
+      "features/*": ["features/*"],
+      "shared/*": ["shared/*"]
+    }
+  },
+  "include": ["src"]
+}
